@@ -34,7 +34,7 @@ li {
   margin: 10px;
 }
 
-#product intput [type="number"] {
+#product intput [type='number'] {
   width: 30px;
   margin-left: 10px;
 }
@@ -45,8 +45,8 @@ li {
   text-align: left;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"] {
+input[type='text'],
+input[type='email'],
+input[type='tel'] {
   width: 300px;
 }

@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 480px;
+  /* 마진 추가 */
+  margin: 40px auto;
+  border: 1px solid black;
+}
+
+h1,
+p {
+  padding: 15px;
+}
+
+fieldset {
+  margin-bottom: 15px;
+  border-style: none;
+  padding: 20px;
+}
+
+fieldset legend {
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin: 10px;
+  line-height: 30px;
+  padding-left: 30px;
+}
+
+input[type='text'],
+input[type='tel'] {
+  width: 150px;
+}
+
+.button {
+  padding: 5px;
+}
