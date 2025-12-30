@@ -41,7 +41,3 @@ input[type='text'],
 input[type='tel'] {
   width: 150px;
 }
-
-.button {
-  padding: 5px;
-}
