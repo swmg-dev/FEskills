@@ -6,9 +6,13 @@
 
 #container {
   width: 480px;
-  /* 마진 추가 */
   margin: 40px auto;
   border: 1px solid black;
+  padding: 20px;
+}
+p {
+  padding: 15px;
+  border-bottom: 1px solid black;
 }
 
 h1,
