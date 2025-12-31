@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      header {
+        background-color: darkseagreen;
+        padding: 40px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+      }
+
+      nav {
+        float: left;
+        width: 30%;
+        height: 300px;
+        background-color: aliceblue;
+        padding: 20px;
+      }
+
+      nav ul li {
+        list-style-type: none;
+        padding: 5px;
+      }
+
+      article {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: rgb(236, 236, 236);
+        height: 300px;
+      }
+
+      section::after {
+        content: "";
+        display: table;
+        clear: both; /* float 속성 삭제 */
+      }
+
+      footer {
+        background-color: darkseagreen;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>CSS Layout</h2>
+    <p>레이아웃을 적용해서 기본적인 페이지의 형태를 구성하는데 목적이 있음..</p>
+    <p>
+      여러 형태의 구현법이 있지만 지금은 가장 기본적인 float 형태의 구성임..
+    </p>
+
+    <!-- header 정의 -->
+    <header>
+      <h2>가상의 웹 사이트</h2>
+    </header>
+
+    <section>
+      <!-- 네비게이션 영역으로 정의-->
+      <nav>
+        <ul>
+          <li>
+            <a href="#">영국사이트</a>
+          </li>
+          <li>
+            <a href="#">미국사이트</a>
+          </li>
+          <li>
+            <a href="#">프랑스사이트</a>
+          </li>
+        </ul>
+      </nav>
+
+      <article>
+        <h2>London</h2>
+        <p>
+          영국의 수도이며....BLA............ 영국의 수도이며....BLA............
+          영국의 수도이며....BLA............영국의 수도이며....BLA............
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      <p>페이지의 저작권 등의 페이지 내용..</p>
+    </footer>
+  </body>
+</html>

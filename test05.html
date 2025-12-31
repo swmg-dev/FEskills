@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test05</title>
+    <style>
+      /* div.hover {
+        display: inline;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 10px;
+        border: 2px solid green;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      div.hover:hover {
+        cursor: pointer;
+        border: none;
+        background-color: yellowgreen;
+      } */
+      a:visited {
+        color: #4fb895;
+      }
+      div {
+        margin: 5px;
+      }
+      div.color a:hover {
+        color: blue;
+      }
+
+      div.size a:hover {
+        font-size: 2rem;
+      }
+
+      div.BGcolor a:hover {
+        background-color: rgb(46, 138, 138);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Link Button</h1>
+    <div>
+      <div class="color">
+        <a href="#" target="_blank">링크 컬러 변경</a>
+      </div>
+
+      <div class="size">
+        <a href="#" target="_blank">글씨크기 변경</a>
+      </div>
+      <div class="BGcolor">
+        <a href="#" target="_blank">BG Color 변경</a>
+      </div>
+    </div>
+    <!-- 
+    <div id="container">
+    <div class="hover">
+    <a href="#">This is a link</a>
+    -->
+  </body>
+</html>
+
+<!-- 
+:hover는 a 태그에만 적용되지 않는다! div에 색이 바뀌어야 하는데 처음에는 a태그에 적용해서 콘텐츠만 배경색이 적용되었다. div:hover로 바꾼 이후 잘 적용되었다. 
+cursor: pointer
+-->
