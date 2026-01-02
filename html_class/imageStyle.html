@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 이미지 자체를 스타일링해서 제어하도록 합니다.*/
+      img.one:hover {
+        box-shadow: 0px 0px 10px 10px rgb(96, 141, 184);
+      }
+
+      .container{
+        position: relative;
+        width: 30%;
+        height: 30%;
+      }
+      
+      .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .overlay {
+        /* 포지션 절대값으로, 보여지는 위치값을 0,0,0,0으로, h/w 100%, 투명도는 반투명하게, 전면효과는 0.5초로 ease 효과로, bgcolor는 편한대로 */
+        position: absolute;
+        top:50%;
+        left: 50%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: rgb(112, 70, 218);
+      }
+      
+      .container:hover .overlay{
+        opacity: 1;
+      }
+
+      .text {
+        color: black;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <h2>이미지 스타일</h2>
+    <a target="_blank" href="imgs/manggom.jpg">
+      <img
+        src="imgs/manggom.jpg"
+        width="300"
+        height="300"
+        class ="one"
+        style="border-radius: 50%; border: 1px solid black"
+      />
+    </a>
+
+    <div class="container">
+      <img src="/html_class/imgs/manggom2.jpg" class="image"></img>
+      <div class="overlay">
+        <div class="text">
+          망곰
+        </div>
+    </div>
+  </body>
+</html>

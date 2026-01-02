@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--display 속성: 요소를 어떻게 표현 할건지에 대한 속성 정의임
+    값으로는 inline, block, flex, grid, inline-block, none이 있음-->
+    <style>
+      #panel,
+      .flip {
+        padding: 10px;
+        text-align: center;
+        background-color: lightcyan;
+        color: black;
+        border: solid 1px cyan;
+        margin: auto;
+        cursor: pointer;
+      }
+      #panel {
+        display: none;
+        cursor: auto;
+      }
+      .imgbox {
+        float: left;
+        text-align: center;
+        width: 120px;
+        border: 1px solid gray;
+        margin: 10px;
+        padding: 6px;
+      }
+      button {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="flip" onclick="myfunction()">
+      나를 클릭하면 panel div가 활성화 됨
+    </p>
+
+    <div id="panel">
+      <p>이 내용은 기본 display 속성이 none이라 보이지 않음</p>
+      <p>자바스크립트의 이벤트와 속성 객체를 이용해서 block으로 활성화</p>
+      <p>감춰진(hidden) 값이 block(visible)로 변경되면서 판넬이 보임</p>
+    </div>
+
+    <hr />
+
+    <!--이미지 박스를 만들어서 그 내부에 버튼을 주고 이벤트를 적용할거임-->
+    <div class="imgbox" id="imgbox1">
+      Box1<br />
+      <img src="guineapig.jpg" style="width: 100%" />
+      <button onclick="removeElement()">Remove</button>
+    </div>
+
+    <div class="imgbox" id="imgbox2">
+      Box2<br />
+      <img src="guineapig.jpg" style="width: 100%" />
+      <button onclick="changeVisivility()">Hide</button>
+    </div>
+
+    <div class="imgbox" id="imgbox3">
+      Box3<br />
+      <img src="guineapig.jpg" style="width: 100%" />
+      <button onclick="resetElement()">Reset All</button>
+    </div>
+
+    <h2>이번에 알아볼 내용은 display 속성 중 hide와 remove입니다</h2>
+    <!--hide는 보이지는 않지만 요소의 위치가 존재하고, 
+    remove는 완전히 제거하는 속성이다-->
+
+    <script>
+      function removeElement() {
+        document.getElementById("imgbox1").style.display = "none";
+      }
+
+      function changeVisivility() {
+        document.getElementById("imgbox2").style.visibility = "hidden";
+      }
+      <!-- hidden의 반대는 visible-->
+      function resetElement() {
+        document.getElementById("imgbox1").style.display = "block";
+        document.getElementById("imgbox2").style.visibility = "visible";
+      }
+
+      function myfunction() {
+        // 객체는 속성과 메소드를 가지고 있다. 객체를 표현할때는 document.을 한다.
+        // alert('날 클릭했군요');
+        // document.getElementById("panel").style.display="block"; // css를 style이라고 작성
+        // x변수를 얻을거임
+        var x = document.getElementById("panel");
+        // console.log(x);
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
